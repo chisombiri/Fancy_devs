@@ -1,0 +1,371 @@
+/* Default styles */
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    font-family: 'Bellota Text', cursive;
+    font-weight: 400;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    width: 1.6rem;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+body::-webkit-scrollbar-thumb {
+    background-color: #ff92ad;
+    outline: 1px solid #ff517d;
+    border-radius: 8px;
+} 
+
+.section-heading{
+    font-size: 10rem;
+    font-weight: bold;
+    color: #999;
+    opacity: 0.2;
+    text-align: center;
+    text-shadow: 2rem 2rem 4rem #aaa;
+    text-transform: uppercase;
+}
+
+/* First Section Styling */
+.section-1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.float-bg{
+    position: absolute;
+    width: 150vw;
+    height: 150vw;
+    background-color: #ff92ad;
+    top: -125vw;
+    left: calc(50% - 75vw);
+    border-radius: 42%;
+    animation: float 30s infinite ;
+}
+
+.float-bg::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #ff517d;
+    position: absolute;
+    border-radius: 40%; 
+    top: 0;
+    left: 0;
+    animation: float 32s infinite ;
+}
+
+@keyframes float {
+    from{
+        transform: rotateZ(0);
+    }
+
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+.navbar{
+    position: relative;
+    z-index: 10;
+    top: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-link{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    color: #ffffff;
+    width: 1.5rem;
+    word-wrap: break-word;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.nav-link:hover{
+    width: 15rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 2.5s;
+}
+
+.section-1-heading{
+    font-size: 8rem;
+    font-family: "Monoton", cursive;
+    position: absolute;
+    top: 20vw;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 85rem;
+    opacity: 0.9;
+    text-align: center;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.8rem;
+    text-shadow: 0.3rem 0.3rem 0.3rem #777;
+}
+
+.logo{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo i{
+    font-size: 15rem;
+    color: #ff517d;
+    text-shadow: 0.1rem 0.1rem 0.2rem #ddd, -0.1rem -0.1rem 0.2rem #ddd;
+}
+
+
+/* Second Section Styling */
+.section-2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.customers-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+}
+
+.customer:first-child{
+    align-self: flex-start;
+}
+
+.customer:last-child{
+    align-self: flex-end;
+}
+
+.customer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35rem;
+    height: 50rem;
+    background-color: #eee;
+    box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: box-shadow 0.5s;
+}
+
+.customer:hover{
+    box-shadow: 2rem 2rem 3rem #ddd, -2rem -2rem 3rem #eee;
+}
+
+.fa-quote-left{
+    font-size: 4rem;
+    color: #ff92ad;
+}
+
+.customer-text{
+    font-size: 1.8rem;
+    margin: 2.5rem 0;
+    text-align: justify;
+}
+
+.customer-text::first-letter{
+    margin-left: 1rem;
+}
+
+.customer-rating i{
+    font-size: 2rem;
+    color: #f08e0f;
+}
+
+.customer-img{
+    width: 10rem; 
+    height: 10rem;
+    object-fit: cover;
+    margin: 2rem 0;
+    border-radius: 50%;
+}
+
+.customer-name{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/* Thrid Section Styling */
+.section-3{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 0;
+}
+
+.team-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+}
+
+.team-member{
+    opacity: 0.8;
+    position: relative;
+    width: 35rem;
+    background-color: #fffeee;
+    padding: 1rem 1rem 2rem 1rem;
+    box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
+    transition: opacity 0.8s;
+}
+
+.team-member:hover{
+    opacity: 1;
+}
+
+.team-member:first-child{
+    align-self: flex-end;
+}
+
+.team-member:last-child{
+    align-self: flex-start;
+}
+
+.team-member-img{
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.team-member-name{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #796717;
+    margin-top: 2rem;
+}
+
+.team-member-name span{
+    font-size: 1.6rem;
+}
+
+.team-member-skills{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 2rem 0;
+}
+
+.team-member-skills li{
+    font-size: 1.5rem;
+    color: #505050;
+}
+
+.projects-btn{
+    font-size: 1.6rem;
+    background-color: #fab34a;
+    color: #ffffff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 4.8rem;
+    letter-spacing: 0.2rem;
+}
+
+.story-btn{
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 10;
+    border-radius: 4.8rem;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.8s;
+}
+
+.change.story-btn{
+    transform: rotate(405deg);
+}
+
+.story-btn-line{
+    width: 100%;
+    height: 0.1rem;
+    background-color: #ffffff;
+    animation: line-shake 0.2s ease-in-out 5s 24;
+}
+
+.story{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    background-color: #ff92adee;
+    padding: 2rem;
+    border-radius: 50rem 0 50rem 50rem;
+    transform-origin: top right;
+    transition: all 0.8s;
+}
+
+.change.story{
+    transform: scale(1);
+    border-radius: 0;
+}
+
+.story-heading{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.story-p{
+    font-size: 1.8rem;
+    color: #eee;
+    text-align: justify;
+    letter-spacing: 0.2rem;
+    text-indent: 2rem;
+}
+
+@keyframes line-shake {
+    0%{
+        transform: rotate(0);
+    }
+
+    0%{
+        transform: rotate(-15deg);
+    }
+
+    0%{
+        transform: rotate(15deg);
+    }
+}
+
