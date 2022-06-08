@@ -25,7 +25,7 @@ html{
     font-size: 10rem;
     font-weight: bold;
     color: #999;
-    opacity: 0.2;
+    opacity: 0.3;
     text-align: center;
     text-shadow: 2rem 2rem 4rem #aaa;
     text-transform: uppercase;
@@ -144,14 +144,6 @@ html{
     height: 70%;
 }
 
-.customer:first-child{
-    align-self: flex-start;
-}
-
-.customer:last-child{
-    align-self: flex-end;
-}
-
 .customer{
     display: flex;
     flex-direction: column;
@@ -163,6 +155,14 @@ html{
     border-radius: 0.5rem;
     padding: 2rem;
     transition: box-shadow 0.5s;
+}
+
+.customer:first-child{
+    align-self: flex-end;
+}
+
+.customer:last-child{
+    align-self: flex-start;
 }
 
 .customer:hover{
@@ -234,11 +234,11 @@ html{
 }
 
 .team-member:first-child{
-    align-self: flex-end;
+    align-self: flex-start;
 }
 
 .team-member:last-child{
-    align-self: flex-start;
+    align-self: flex-end;
 }
 
 .team-member-img{
@@ -473,3 +473,198 @@ html{
     background-color: #ff92ad;
 }
 
+/* Responsive styling */
+@media (max-width: 1400px) {
+    .float-bg{
+        top: -122vw;
+    }
+
+    .section-1-heading{
+        font-size: 6rem;
+        top: 22vw;
+        width: 70rem;
+    }
+
+    .nav-link{
+        font-size: 2rem;
+    }
+
+    .logo{
+        top: 72%;
+    }
+
+    .logo i{
+        font-size: 12rem;
+    }
+
+    .section-heading{
+        font-size: 8rem;
+        margin-bottom: 6rem;
+    }
+
+    .section-2{
+        height: auto;
+    }
+
+    .customers-container{
+        flex-wrap: wrap;
+    }
+
+    .customer{
+        margin: 5rem 10rem;
+    }
+
+    .section-3{
+        height: auto;
+    }
+
+    .team-container{
+        flex-wrap: wrap;
+    }
+
+    .team-member{
+        margin: 5rem 10rem;
+    }
+
+    .form-container{
+        height: 60%;
+    }
+
+    .form-img{
+        transform: rotateY(20deg) scale(0.7);
+        transition: all 0.5s;
+    }
+    
+    .form-img:hover{
+        transform: translateY(-1.5rem) rotateY(20deg) scale(0.7);
+    }
+    
+    .contact-form{
+        transform: rotateY(-20deg) scale(0.8);
+        transition: all 0.5s;
+    }
+    
+    .contact-form:hover{
+        transform: translateY(-1.5rem) rotateY(-20deg) scale(0.8);
+    }
+
+    .copyright{
+        margin: 5rem 0 4rem 0;
+    }
+}
+
+@media (max-width: 1150px){
+    .float-bg{
+        top: -110vw;
+    }
+
+    .section-1-heading{
+        font-size: 5rem;
+        top: 30vw;
+        width: 60rem;
+    }
+
+    .logo i{
+        font-size: 10rem;
+    }
+
+    .form-img{
+        display: none;
+    }
+    
+    .contact-form{
+        transform: translateY(0);
+    }
+    
+    .contact-form:hover{
+        transform: translateY(-1.5rem);
+    }
+}
+
+@media (max-width: 950px) {
+    .float-bg{
+        top: -100vw;
+    }
+    
+    .section-1-heading{
+        top: 40vw;
+    }
+
+    .navbar{
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 750px) {
+    html{
+        font-size: 50%;
+    }
+
+    .float-bg{
+        top: -90vw;
+    }
+    
+    .section-1-heading{
+        top: 48vw;
+    }
+
+    .section-heading{
+        margin-bottom: 5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    html{
+        font-size: 45%;
+    }
+
+    .float-bg{
+        top: -70vw;
+    }
+    
+    .section-1-heading{
+        top: 65vw;
+        width: 42rem;
+        font-size: 3.6rem;
+    }
+
+    .section-heading{
+        font-size: 6rem;
+    }
+
+    .customer{
+        margin: 5rem 0;
+    }
+
+    .team-member{
+        margin: 5rem 0;
+    }
+
+    .contact-section{
+        height: auto;
+    }
+
+    .form-container{
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .contact-form{
+        box-shadow: 1rem 1rem 2rem #aaa;
+    }
+
+    .contact-form:hover{
+        box-shadow: 2rem 2rem 3rem #aaa;
+    }
+
+    .copyright{
+        font-size: 1.8rem;
+        margin: 5rem;
+        text-align: center;
+    }
+
+    .upscroll-btn{
+        bottom: 2rem;
+        right: 2rem;
+    }
+}
