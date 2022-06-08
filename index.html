@@ -13,12 +13,12 @@
 <body>
     <div class="container">
         <!-- First Section -->
-        <section class="section-1">'
+        <section id="home" class="section-1">'
             <nav class="navbar">
-                <a href="#" class="nav-link">Projects</a>
-                <a href="#" class="nav-link">Customers</a>
-                <a href="#" class="nav-link">Team</a>
-                <a href="#" class="nav-link">Contact</a>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#customers" class="nav-link">Customers</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
             <div class="float-bg"></div>
             <h1 class="section-1-heading">Fancy Devs</h1>
@@ -28,8 +28,8 @@
         </section>
 
         <!-- Second Section -->
-        <section class="section-2">
-            <h1 class="section-heading">Customers</h1>
+        <section id="customers" class="section-2">
+            <h2 class="section-heading">Customers</h2>
             <div class="customers-container">
                 <div class="customer">
                     <i class="fas fa-quote-left"></i>
@@ -74,8 +74,8 @@
         </section>
 
         <!-- Third Section -->
-        <section class="section-3">
-            <h1 class="section-heading">Team</h1>
+        <section id="team" class="section-3">
+            <h2 class="section-heading">Team</h2>
             <div class="team-container">
                 <div class="team-member">
                     <img class="team-member-img" src="images/team-member-1.jpg" >
@@ -87,7 +87,7 @@
                         <li>React</li>
                         <li>SEO</li>
                     </ul>
-                    <a href="" class="projects-btn">Projects</a>
+                    <a class="projects-btn">Projects</a>
                     <div class="story-btn" title="My Story">
                         <div class="story-btn-line"></div>
                     </div>
@@ -106,7 +106,7 @@
                         <li>HTML5</li>
                         <li>Ae</li>
                     </ul>
-                    <a href="" class="projects-btn">Projects</a>
+                    <a class="projects-btn">Projects</a>
                     <div class="story-btn" title="My Story">
                         <div class="story-btn-line"></div>
                     </div>
@@ -125,7 +125,7 @@
                         <li>React</li>
                         <li>Python</li>
                     </ul>
-                    <a href="" class="projects-btn">Projects</a>
+                    <a class="projects-btn">Projects</a>
                     <div class="story-btn" title="My Story">
                         <div class="story-btn-line"></div>
                     </div>
@@ -137,8 +137,27 @@
             </div>
         </section>
 
-    </div>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-heading">Contact</h2>
+            <div class="form-container">
+                <img class="form-img" src="images/form-img.png" alt="contact">
+                <form class="contact-form">
+                    <input type="text" placeholder="Enter Your Name">
+                    <input type="email" placeholder="Enter Your Email">
+                    <textarea placeholder="What would you like to tell us?"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <p class="copyright">Chisombiri &copy; 2022</p>
+        </section>
 
+        <!-- Scroll arrow button -->
+        
+        <a class="upscroll-btn" href="#home">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
 
     <script src="index.js"></script>
 </body>
